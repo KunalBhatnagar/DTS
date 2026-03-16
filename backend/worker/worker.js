@@ -1,12 +1,7 @@
-import dotenv from "dotenv";
-dotenv.config();
-
 import { Worker } from "bullmq";
 import { getRedisConnection } from "../config/redis.js";
-import { connectDB } from "../config/db.js";
 import Task from "../models/task.js";
 
-await connectDB();
 const redisConnection = getRedisConnection();
 
 const worker = new Worker(

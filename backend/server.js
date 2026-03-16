@@ -21,6 +21,9 @@ const PORT = process.env.PORT || 4000;
 
 await connectDB();
 
+// Start worker in the same process (after DB is connected)
+await import("./worker/worker.js");
+
 const server = http.createServer(app);
 
 const io = new Server(server, {

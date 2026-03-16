@@ -12,6 +12,9 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "bullmq": "^5.70.4",
     "cors": "^2.8.6",
